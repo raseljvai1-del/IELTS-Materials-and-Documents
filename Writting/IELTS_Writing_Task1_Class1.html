@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Writing Task 1 — Class 1 Lecture</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C8922A;
+    --gold-light: #FDF3E3;
+    --gold-mid: #F0C97A;
+    --navy: #1B2A4A;
+    --navy-mid: #2E4170;
+    --navy-light: #EDF0F7;
+    --green: #1D6B3E;
+    --green-light: #E8F5EE;
+    --red: #A32828;
+    --red-light: #FDF0F0;
+    --teal: #0F6E6E;
+    --teal-light: #E2F4F4;
+    --purple: #533A9E;
+    --purple-light: #F0EDF9;
+    --gray: #F7F6F3;
+    --border: #E0DDD5;
+    --text: #1A1A1A;
+    --muted: #5A5A5A;
+    --bangla-bg: #FFFAEC;
+    --bangla-border: #E8C96A;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+    background: #FAFAF8;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    background: var(--navy);
+    color: #fff;
+    padding: 56px 48px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 340px; height: 340px;
+    border-radius: 50%;
+    border: 2px solid rgba(200,146,42,0.25);
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: 60px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    border: 2px solid rgba(200,146,42,0.15);
+  }
+  .badge {
+    display: inline-block;
+    background: var(--gold);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .cover h1 {
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+  .cover h1 span { color: var(--gold-mid); }
+  .cover p.subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 28px;
+    max-width: 540px;
+  }
+  .cover-stats {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .cover-stat {
+    text-align: left;
+  }
+  .cover-stat strong {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gold-mid);
+  }
+  .cover-stat span {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── LAYOUT ── */
+  .page { max-width: 860px; margin: 0 auto; padding: 48px 40px; }
+
+  /* ── SECTION HEADERS ── */
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 52px;
+  }
+  .section-num {
+    width: 34px; height: 34px;
+    background: var(--navy);
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section-label h2 {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--navy);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 3px;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 24px 0 10px;
+  }
+
+  p { margin-bottom: 12px; }
+
+  /* ── BANGLA BOX ── */
+  .bangla {
+    background: var(--bangla-bg);
+    border-left: 4px solid var(--bangla-border);
+    border-radius: 0 8px 8px 0;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #5A4200;
+    margin: 8px 0 14px;
+    font-style: italic;
+  }
+  .bangla strong { font-style: normal; color: #3D2C00; }
+
+  /* ── INFO BOXES ── */
+  .infobox {
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .infobox.blue  { background: var(--navy-light); border-left: 4px solid var(--navy-mid); }
+  .infobox.green { background: var(--green-light); border-left: 4px solid var(--green); }
+  .infobox.red   { background: var(--red-light);   border-left: 4px solid var(--red); }
+  .infobox.gold  { background: var(--gold-light);  border-left: 4px solid var(--gold); }
+  .infobox.teal  { background: var(--teal-light);  border-left: 4px solid var(--teal); }
+  .infobox.purple{ background: var(--purple-light);border-left: 4px solid var(--purple); }
+  .infobox-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .infobox.blue  .infobox-title { color: var(--navy-mid); }
+  .infobox.green .infobox-title { color: var(--green); }
+  .infobox.red   .infobox-title { color: var(--red); }
+  .infobox.gold  .infobox-title { color: #8B5E00; }
+  .infobox.teal  .infobox-title { color: var(--teal); }
+  .infobox.purple .infobox-title{ color: var(--purple); }
+
+  /* ── TABLES ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 14.5px;
+  }
+  thead th {
+    background: var(--navy);
+    color: #fff;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+  }
+  thead th:first-child { border-radius: 8px 0 0 0; }
+  thead th:last-child  { border-radius: 0 8px 0 0; }
+  tbody tr:nth-child(odd)  { background: #FAFAF8; }
+  tbody tr:nth-child(even) { background: var(--gray); }
+  td {
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td:first-child { font-weight: 600; color: var(--navy); }
+
+  /* ── VOCAB TABLE ── */
+  .vocab-table td:first-child { font-weight: 700; color: var(--teal); }
+
+  /* ── TYPE CARDS ── */
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 14px;
+    margin: 18px 0;
+  }
+  .type-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    background: #fff;
+  }
+  .type-card-icon {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+  .type-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .type-card p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .type-card .example-q {
+    font-size: 12px;
+    background: var(--gold-light);
+    border-radius: 6px;
+    padding: 8px 10px;
+    color: #5A3E00;
+    font-style: italic;
+    margin-bottom: 0;
+  }
+
+  /* ── BAND CARDS ── */
+  .band-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 18px;
+    margin: 16px 0;
+  }
+  .band-card {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .band-card-header {
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .band-card-header h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .band-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+  .band-card-body { padding: 14px 18px; background: #fff; }
+  .band-card-body .row { margin-bottom: 10px; }
+  .band-card-body .row-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+  .band-card-body .row-val { font-size: 14px; }
+  .band-ta .band-card-header { background: var(--navy); }
+  .band-cc .band-card-header { background: var(--teal); }
+  .band-lr .band-card-header { background: var(--green); }
+  .band-gr .band-card-header { background: var(--purple); }
+
+  /* ── SAMPLE ANSWER ── */
+  .sample-wrap {
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+  .sample-header {
+    background: var(--gold);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sample-header span {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .sample-body { background: #fff; }
+  .para-block {
+    border-left: 4px solid transparent;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .para-block:last-child { border-bottom: none; }
+  .para-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .para-intro  { border-color: var(--navy);   }
+  .para-intro  .para-label { color: var(--navy); }
+  .para-over   { border-color: var(--gold);   }
+  .para-over   .para-label { color: #8B5E00; }
+  .para-body1  { border-color: var(--teal);   }
+  .para-body1  .para-label { color: var(--teal); }
+  .para-body2  { border-color: var(--green);  }
+  .para-body2  .para-label { color: var(--green); }
+  .para-text { font-size: 15px; line-height: 1.8; }
+  .para-text mark {
+    background: #FFF3BB;
+    border-radius: 3px;
+    padding: 0 2px;
+  }
+
+  /* ── FORMULA BOX ── */
+  .formula {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 10px;
+    padding: 18px 24px;
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    line-height: 2;
+    margin: 16px 0;
+  }
+  .formula .bracket { color: var(--gold-mid); }
+  .formula .plus { color: rgba(255,255,255,0.4); margin: 0 6px; }
+
+  /* ── PRACTICE STEPS ── */
+  .practice-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    background: #fff;
+    margin: 14px 0;
+  }
+  .practice-card h5 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .step-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+    align-items: flex-start;
+    font-size: 14px;
+  }
+  .step-num {
+    background: var(--navy-light);
+    color: var(--navy);
+    border-radius: 50%;
+    width: 22px; height: 22px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .q-text   { font-style: italic; color: var(--muted); font-size: 14px; }
+  .ans-text { background: var(--green-light); border-radius: 6px; padding: 6px 10px; font-size: 14px; margin-top: 6px; }
+
+  /* ── MISTAKE LIST ── */
+  .mistake-item {
+    display: flex;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: flex-start;
+  }
+  .mistake-item:last-child { border-bottom: none; }
+  .x-mark {
+    width: 26px; height: 26px;
+    background: var(--red-light);
+    border: 1px solid #F0BBBB;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--red);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .mistake-text { font-size: 14.5px; }
+  .mistake-text strong { color: var(--red); }
+  .mistake-text .fix { color: var(--green); font-weight: 600; }
+
+  /* ── HW BOX ── */
+  .hw-box {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 28px 32px;
+    color: #fff;
+    margin-top: 40px;
+  }
+  .hw-box h3 {
+    color: var(--gold-mid);
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  .hw-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 14.5px;
+  }
+  .hw-num {
+    background: var(--gold);
+    color: #fff;
+    border-radius: 50%;
+    width: 24px; height: 24px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    border: none;
+    border-top: 2px dashed var(--border);
+    margin: 40px 0;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--navy);
+    text-align: center;
+    padding: 22px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── UTIL ── */
+  ul.clean { list-style: none; padding-left: 0; }
+  ul.clean li { padding: 4px 0 4px 20px; position: relative; font-size: 14.5px; }
+  ul.clean li::before {
+    content: '▸';
+    position: absolute; left: 0;
+    color: var(--gold);
+    font-size: 11px; top: 7px;
+  }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-right: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .pill.blue   { background: var(--navy-light); color: var(--navy); }
+  .pill.green  { background: var(--green-light); color: var(--green); }
+  .pill.gold   { background: var(--gold-light); color: #7A4500; }
+  .pill.teal   { background: var(--teal-light); color: var(--teal); }
+  .pill.purple { background: var(--purple-light); color: var(--purple); }
+  .pill.red    { background: var(--red-light); color: var(--red); }
+
+  @media print {
+    body { background: #fff; }
+    .cover { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ COVER ═══════════════ -->
+<div class="cover">
+  <div class="badge">IELTS Preparation — Writing Module</div>
+  <h1>Writing Task 1<br><span>Complete Class 1 Lecture</span></h1>
+  <p class="subtitle">For absolute beginners — simple English, clear examples, step-by-step guidance with Bangla notes.</p>
+  <div class="cover-stats">
+    <div class="cover-stat"><strong>150+</strong><span>Min. Words Required</span></div>
+    <div class="cover-stat"><strong>20 min</strong><span>Time Allowed</span></div>
+    <div class="cover-stat"><strong>4</strong><span>Marking Criteria</span></div>
+    <div class="cover-stat"><strong>6</strong><span>Types of Task 1</span></div>
+  </div>
+</div>
+
+<div class="page">
+
+<!-- ═══════════ SECTION 1: WHAT IS TASK 1 ═══════════ -->
+<div class="section-label">
+  <div class="section-num">1</div>
+  <h2>What is IELTS Writing Task 1?</h2>
+</div>
+
+<p>IELTS Writing Task 1 is the <strong>first question</strong> in the IELTS Academic Writing exam. The examiner gives you a picture — a chart, graph, table, or diagram — and you must <strong>describe what you see</strong> in your own words.</p>
+
+<div class="bangla">
+  <strong>বাংলায় সহজ কথায়:</strong> পরীক্ষক আপনাকে একটি ছবি দেবে (চার্ট/গ্রাফ/ডায়াগ্রাম), আপনাকে সেই ছবির তথ্য English-এ লিখে বর্ণনা করতে হবে। আপনার নিজের মত বা opinion দেওয়ার দরকার নেই।
+</div>
+
+<div class="infobox blue">
+  <div class="infobox-title">Quick Facts — Task 1 at a Glance</div>
+  <table style="margin:0;">
+    <thead><tr><th>What?</th><th>Answer</th></tr></thead>
+    <tbody>
+      <tr><td>Minimum words</td><td>150 words (লিখতেই হবে — কম লিখলে marks কাটা যাবে)</td></tr>
+      <tr><td>Recommended words</td><td>160–180 words</td></tr>
+      <tr><td>Time</td><td>20 minutes (Task 2 তে বেশি সময় দিন — সেটা বেশি marks দেয়)</td></tr>
+      <tr><td>Your job</td><td>Describe the key information — do NOT give your opinion</td></tr>
+      <tr><td>Marks worth</td><td>33% of your total Writing band score</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="infobox green">
+  <div class="infobox-title">Remember: What To Do vs What NOT To Do</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:8px;">
+    <div>
+      <div style="font-weight:700; color:var(--green); margin-bottom:6px;">✔ DO THIS</div>
+      <ul class="clean">
+        <li>Describe numbers and trends</li>
+        <li>Compare the most important data</li>
+        <li>Write an overview (main points)</li>
+        <li>Use proper vocabulary</li>
+      </ul>
+    </div>
+    <div>
+      <div style="font-weight:700; color:var(--red); margin-bottom:6px;">✘ DON'T DO THIS</div>
+      <ul class="clean">
+        <li>Give your personal opinion</li>
+        <li>Write a conclusion with suggestions</li>
+        <li>Copy the question word for word</li>
+        <li>Write less than 150 words</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════ SECTION 2: TYPES ═══════════ -->
+<div class="section-label">
+  <div class="section-num">2</div>
+  <h2>All Types of Writing Task 1</h2>
+</div>
+
+<p>There are <strong>6 main types</strong> of Task 1. You can get any one of these in the exam. Let's learn each type:</p>
+
+<div class="type-grid">
+
+  <div class="type-card">
+    <div class="type-card-icon">📊</div>
+    <h4>Bar Chart (Bar Graph)</h4>
+    <p>Shows data using vertical or horizontal <strong>bars</strong>. You compare amounts between different groups or time periods.</p>
+    <div class="example-q">"The bar chart below shows the number of students who studied science, arts, and commerce in five countries in 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant."</div>
+  </div>
+
+  <div class="type-card">
+    <div class="type-card-icon">📈</div>
+    <h4>Line Graph</h4>
+    <p>Shows <strong>changes over time</strong> using connected lines. You describe trends — how data goes up, down, or stays the same.</p>
+    <div class="example-q">"The line graph below shows the average monthly temperatures in London and Sydney between January and December. Summarise the information by selecting and reporting the main features."</div>
+  </div>
+
+  <div class="type-card">
+    <div class="type-card-icon">🥧</div>
+    <h4>Pie Chart</h4>
+    <p>A circle divided into <strong>slices</strong>. Each slice shows a percentage. You describe the biggest and smallest parts.</p>
+    <div class="example-q">"The pie charts below show how people in the UK spent their free time in 1980 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant."</div>
+  </div>
+
+  <div class="type-card">
+    <div class="type-card-icon">📋</div>
+    <h4>Table</h4>
+    <p>Shows data in <strong>rows and columns</strong>. You pick the most important numbers and compare them.</p>
+    <div class="example-q">"The table below shows the average cost of living in four cities — Dhaka, London, New York, and Tokyo — in 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant."</div>
+  </div>
+
+  <div class="type-card">
+    <div class="type-card-icon">⚙️</div>
+    <h4>Process Diagram</h4>
+    <p>Shows <strong>how something works</strong> or how something is made — step by step. You describe each stage in order.</p>
+    <div class="example-q">"The diagram below shows how chocolate is produced, from the cocoa plant to the finished product. Summarise the information by selecting and reporting the main features."</div>
+  </div>
+
+  <div class="type-card">
+    <div class="type-card-icon">🗺️</div>
+    <h4>Map</h4>
+    <p>Shows a place at <strong>two different times</strong> (before and after). You describe what changed — new buildings, roads, etc.</p>
+    <div class="example-q">"The maps below show a small town in 1990 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant."</div>
+  </div>
+
+</div>
+
+<div class="infobox gold">
+  <div class="infobox-title">Tip for Beginners</div>
+  Bar charts, line graphs, and pie charts are the <strong>most common</strong> types in the exam. Practice these first. Process diagrams and maps are less common but you must know them. (পরীক্ষায় সবচেয়ে বেশি আসে Bar Chart, Line Graph, এবং Pie Chart — এগুলো আগে ভালো করে শিখুন।)
+</div>
+
+
+<!-- ═══════════ SECTION 3: MARKING CRITERIA ═══════════ -->
+<div class="section-label">
+  <div class="section-num">3</div>
+  <h2>Marking Criteria — How You Are Marked</h2>
+</div>
+
+<p>Your Task 1 answer is marked using <strong>4 criteria (বিচারের মানদণ্ড)</strong>. Each one is worth <strong>25%</strong> of your Task 1 mark. Let's understand all four:</p>
+
+<div class="band-grid">
+
+  <!-- TA -->
+  <div class="band-card band-ta">
+    <div class="band-card-header">
+      <div>
+        <h4>Task Achievement (TA)</h4>
+        <span class="band-tag">25% of mark</span>
+      </div>
+    </div>
+    <div class="band-card-body">
+      <div class="row">
+        <div class="row-label">What the examiner checks</div>
+        <div class="row-val">Did you answer the question properly? Did you describe the main features? Did you write at least 150 words? Did you write an overview?</div>
+      </div>
+      <div class="row">
+        <div class="row-label">Simple tip for beginners</div>
+        <div class="row-val">Always write an <strong>overview paragraph</strong> — 2 sentences about the biggest/most important things you see. Never skip this!</div>
+      </div>
+      <div class="row">
+        <div class="row-label">Example</div>
+        <div class="row-val" style="background:var(--navy-light);padding:8px;border-radius:6px;font-size:13.5px;">
+          <strong>Overview:</strong> "Overall, it is clear that sales increased significantly over the period, with the highest figures recorded in 2022."
+        </div>
+      </div>
+      <div class="bangla" style="margin-top:10px;">পরীক্ষক দেখবেন আপনি প্রশ্নের সঠিক উত্তর দিয়েছেন কিনা, সবচেয়ে গুরুত্বপূর্ণ তথ্যগুলো বলেছেন কিনা, এবং Overview দিয়েছেন কিনা।</div>
+    </div>
+  </div>
+
+  <!-- CC -->
+  <div class="band-card band-cc">
+    <div class="band-card-header">
+      <div>
+        <h4>Coherence & Cohesion (CC)</h4>
+        <span class="band-tag">25% of mark</span>
+      </div>
+    </div>
+    <div class="band-card-body">
+      <div class="row">
+        <div class="row-label">What the examiner checks</div>
+        <div class="row-val">Is your writing easy to follow? Do your ideas connect logically? Do you use linking words like <em>however, furthermore, in contrast</em>?</div>
+      </div>
+      <div class="row">
+        <div class="row-label">Simple tip for beginners</div>
+        <div class="row-val">Use <strong>4 paragraphs</strong> always: Introduction → Overview → Body 1 → Body 2. Use linking words at the start of each sentence.</div>
+      </div>
+      <div class="row">
+        <div class="row-label">Example</div>
+        <div class="row-val" style="background:var(--teal-light);padding:8px;border-radius:6px;font-size:13.5px;">
+          "Sales rose sharply in 2020. <strong>However,</strong> they fell again in 2021. <strong>By contrast,</strong> production remained steady."
+        </div>
+      </div>
+      <div class="bangla" style="margin-top:10px;">Coherence মানে আপনার লেখা কি সহজে পড়া যাচ্ছে? Cohesion মানে আপনি কি linking words ব্যবহার করছেন? (However, Furthermore, In contrast, Moreover, etc.)</div>
+    </div>
+  </div>
+
+  <!-- LR -->
+  <div class="band-card band-lr">
+    <div class="band-card-header">
+      <div>
+        <h4>Lexical Resource (LR)</h4>
+        <span class="band-tag">25% of mark</span>
+      </div>
+    </div>
+    <div class="band-card-body">
+      <div class="row">
+        <div class="row-label">What the examiner checks</div>
+        <div class="row-val">Do you use a variety of vocabulary (শব্দভাণ্ডার)? Do you avoid repeating the same words again and again? Do you spell words correctly?</div>
+      </div>
+      <div class="row">
+        <div class="row-label">Simple tip for beginners</div>
+        <div class="row-val">Do NOT use the word "shows" five times. Use synonyms: <em>illustrates, presents, displays, reveals, demonstrates.</em></div>
+      </div>
+      <div class="row">
+        <div class="row-label">Example</div>
+        <div class="row-val" style="background:var(--green-light);padding:8px;border-radius:6px;font-size:13.5px;">
+          ✘ "The graph shows... The graph shows... The graph shows..."<br>
+          ✔ "The graph <strong>illustrates</strong>... It <strong>reveals</strong>... The data <strong>demonstrates</strong>..."
+        </div>
+      </div>
+      <div class="bangla" style="margin-top:10px;">একই শব্দ বারবার ব্যবহার করলে marks কম পাবেন। বিভিন্ন synonyms শিখুন এবং ব্যবহার করুন।</div>
+    </div>
+  </div>
+
+  <!-- GRA -->
+  <div class="band-card band-gr">
+    <div class="band-card-header">
+      <div>
+        <h4>Grammatical Range & Accuracy (GRA)</h4>
+        <span class="band-tag">25% of mark</span>
+      </div>
+    </div>
+    <div class="band-card-body">
+      <div class="row">
+        <div class="row-label">What the examiner checks</div>
+        <div class="row-val">Do you use different types of sentences? Do you make grammar mistakes? Do you use correct verb tenses (past/present)?</div>
+      </div>
+      <div class="row">
+        <div class="row-label">Simple tip for beginners</div>
+        <div class="row-val">Use <strong>past tense</strong> for old data, <strong>present tense</strong> for processes and maps. Try to mix simple and complex sentences.</div>
+      </div>
+      <div class="row">
+        <div class="row-label">Example</div>
+        <div class="row-val" style="background:var(--purple-light);padding:8px;border-radius:6px;font-size:13.5px;">
+          Simple: "Sales <strong>increased</strong> in 2020."<br>
+          Complex: "Sales <strong>increased</strong> dramatically in 2020, <strong>reaching</strong> a peak of 500 units."
+        </div>
+      </div>
+      <div class="bangla" style="margin-top:10px;">Grammar ঠিকঠাক রাখুন। Data যদি পুরনো হয় (e.g. 2010–2020) তাহলে Past Tense ব্যবহার করুন। Process/Map-এ Present Tense ব্যবহার করুন।</div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════ SECTION 4: VOCABULARY ═══════════ -->
+<div class="section-label">
+  <div class="section-num">4</div>
+  <h2>Basic Must-Know Vocabulary</h2>
+</div>
+
+<p>These are the <strong>most important words</strong> for Task 1. Learn all of them. Practice writing sentences with each word.</p>
+
+<h3>A. Synonyms of "shows" — (একই অর্থের বিভিন্ন শব্দ)</h3>
+<p>Never say "shows" every time! Use these words instead:</p>
+
+<table class="vocab-table">
+  <thead><tr><th>Word</th><th>Example Sentence</th></tr></thead>
+  <tbody>
+    <tr><td>illustrates</td><td>The bar chart <strong>illustrates</strong> the number of cars sold in five countries in 2022.</td></tr>
+    <tr><td>presents</td><td>The pie chart <strong>presents</strong> the distribution of household spending in the UK.</td></tr>
+    <tr><td>displays</td><td>The table <strong>displays</strong> the population figures of six major cities.</td></tr>
+    <tr><td>reveals</td><td>The line graph <strong>reveals</strong> a steady increase in global temperatures over 50 years.</td></tr>
+    <tr><td>demonstrates</td><td>The data <strong>demonstrates</strong> that more people are choosing online shopping.</td></tr>
+    <tr><td>depicts</td><td>The diagram <strong>depicts</strong> the stages of water purification.</td></tr>
+    <tr><td>compares</td><td>The chart <strong>compares</strong> the income levels of men and women in three sectors.</td></tr>
+  </tbody>
+</table>
+
+<h3>B. Words for Increase — (বাড়া/উপরে যাওয়া)</h3>
+
+<table class="vocab-table">
+  <thead><tr><th>Word / Phrase</th><th>Type</th><th>Example Sentence</th></tr></thead>
+  <tbody>
+    <tr><td>rose / rose to</td><td>verb</td><td>The number of visitors <strong>rose</strong> from 2,000 to 5,000 between 2010 and 2020.</td></tr>
+    <tr><td>increased</td><td>verb</td><td>Sales <strong>increased</strong> significantly in the third quarter.</td></tr>
+    <tr><td>grew</td><td>verb</td><td>The population <strong>grew</strong> steadily over the ten-year period.</td></tr>
+    <tr><td>climbed</td><td>verb</td><td>Temperatures <strong>climbed</strong> from 20°C to 35°C in July.</td></tr>
+    <tr><td>surged</td><td>verb (fast rise)</td><td>Online sales <strong>surged</strong> during the pandemic in 2020.</td></tr>
+    <tr><td>a rise / an increase</td><td>noun</td><td>There was <strong>a sharp rise</strong> in unemployment in 2008.</td></tr>
+    <tr><td>an upward trend</td><td>noun phrase</td><td>The graph shows <strong>an upward trend</strong> in mobile phone usage.</td></tr>
+  </tbody>
+</table>
+
+<h3>C. Words for Decrease — (কমা/নিচে যাওয়া)</h3>
+
+<table class="vocab-table">
+  <thead><tr><th>Word / Phrase</th><th>Type</th><th>Example Sentence</th></tr></thead>
+  <tbody>
+    <tr><td>fell / fell to</td><td>verb</td><td>The number of smokers <strong>fell</strong> from 40% to 25% over two decades.</td></tr>
+    <tr><td>decreased</td><td>verb</td><td>Exports <strong>decreased</strong> considerably after the new tax was introduced.</td></tr>
+    <tr><td>dropped</td><td>verb</td><td>Profits <strong>dropped</strong> by 15% in the final quarter.</td></tr>
+    <tr><td>declined</td><td>verb</td><td>The use of public transport <strong>declined</strong> between 2000 and 2010.</td></tr>
+    <tr><td>plummeted</td><td>verb (very fast fall)</td><td>Share prices <strong>plummeted</strong> following the financial crisis.</td></tr>
+    <tr><td>a fall / a decrease</td><td>noun</td><td>There was <strong>a gradual decrease</strong> in crime rates over five years.</td></tr>
+    <tr><td>a downward trend</td><td>noun phrase</td><td>The data shows <strong>a downward trend</strong> in birth rates across Europe.</td></tr>
+  </tbody>
+</table>
+
+<h3>D. Words for No Change — (একই থাকা)</h3>
+
+<table class="vocab-table">
+  <thead><tr><th>Word / Phrase</th><th>Example Sentence</th></tr></thead>
+  <tbody>
+    <tr><td>remained stable</td><td>The unemployment rate <strong>remained stable</strong> at around 5% throughout the period.</td></tr>
+    <tr><td>stayed the same</td><td>The price of bread <strong>stayed the same</strong> from 2018 to 2020.</td></tr>
+    <tr><td>levelled off</td><td>After rising sharply, sales <strong>levelled off</strong> in 2015.</td></tr>
+    <tr><td>plateaued</td><td>Growth <strong>plateaued</strong> at approximately 30% during the middle years.</td></tr>
+    <tr><td>showed little change</td><td>The figures <strong>showed little change</strong> over the entire decade.</td></tr>
+  </tbody>
+</table>
+
+<h3>E. Speed & Size Adverbs — (কত দ্রুত বা কতটুকু পরিবর্তন হয়েছে)</h3>
+<p>These words make your description more precise and improve your Lexical Resource score.</p>
+
+<table class="vocab-table">
+  <thead><tr><th>Speed / Size</th><th>Adverb / Adjective</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td>Very fast change</td><td>dramatically, sharply, steeply, rapidly</td><td>Sales <strong>rose sharply</strong> to 800 units. / There was <strong>a dramatic increase</strong>.</td></tr>
+    <tr><td>Medium change</td><td>significantly, considerably, markedly</td><td>The number <strong>decreased significantly</strong> in 2019.</td></tr>
+    <tr><td>Slow change</td><td>gradually, steadily, slowly, moderately</td><td>Temperatures <strong>gradually fell</strong> from October to January.</td></tr>
+    <tr><td>Small change</td><td>slightly, marginally, a little</td><td>Profits <strong>increased slightly</strong> to $1.2 million.</td></tr>
+  </tbody>
+</table>
+
+<div class="bangla">
+  <strong>মনে রাখুন:</strong> এই শব্দগুলো দুইভাবে ব্যবহার করা যায়। হয় verb-এর সাথে adverb হিসেবে ("rose <em>sharply</em>") অথবা noun-এর সাথে adjective হিসেবে ("a <em>sharp</em> rise")। দুটোই সঠিক।
+</div>
+
+
+<!-- ═══════════ SECTION 5: 4-PARAGRAPH STRUCTURE ═══════════ -->
+<div class="section-label">
+  <div class="section-num">5</div>
+  <h2>The 4-Paragraph Structure</h2>
+</div>
+
+<p>Every Task 1 answer should have <strong>exactly 4 paragraphs</strong>. This is the most important structure you must remember:</p>
+
+<table>
+  <thead><tr><th>Paragraph</th><th>Name</th><th>What to write</th><th>How long?</th></tr></thead>
+  <tbody>
+    <tr><td>1st</td><td>Introduction</td><td>Paraphrase (rewrite in your own words) the question. Say what the chart shows, where, and when.</td><td>2 sentences</td></tr>
+    <tr><td>2nd</td><td>Overview</td><td>Write the 2–3 most important features. Do NOT include numbers here. This is like a summary.</td><td>2 sentences</td></tr>
+    <tr><td>3rd</td><td>Body Paragraph 1</td><td>Describe the first group of data in detail. Include specific numbers, percentages, and dates.</td><td>3–4 sentences</td></tr>
+    <tr><td>4th</td><td>Body Paragraph 2</td><td>Describe the second group of data. Compare where possible. Include specific numbers.</td><td>3–4 sentences</td></tr>
+  </tbody>
+</table>
+
+<div class="bangla">
+  <strong>সবচেয়ে গুরুত্বপূর্ণ কথা:</strong> Overview paragraph কখনো বাদ দেবেন না! পরীক্ষকরা সবার আগে Overview খোঁজেন। Overview না থাকলে Task Achievement-এ Band 5-এর বেশি পাওয়া সম্ভব না।
+</div>
+
+<h3>Full Sample Answer — Bar Chart (Band 6–7)</h3>
+
+<div class="infobox gold">
+  <div class="infobox-title">The Question</div>
+  <em>The bar chart below shows the number of international tourists (in millions) who visited three countries — France, Spain, and the USA — in 2000, 2010, and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</em>
+  <br><br>
+  <strong>Data:</strong> France: 70M / 77M / 90M | Spain: 45M / 52M / 83M | USA: 55M / 60M / 79M
+</div>
+
+<div class="sample-wrap">
+  <div class="sample-header">
+    <span>Sample Answer — Band 6–7</span>
+    <span>≈ 170 words</span>
+  </div>
+  <div class="sample-body">
+
+    <div class="para-block para-intro">
+      <div class="para-label">Paragraph 1 — Introduction</div>
+      <div class="para-text">
+        The bar chart <mark>illustrates</mark> the number of international tourists, measured in millions, who <mark>visited</mark> France, Spain, and the United States in three different years: 2000, 2010, and 2020.
+      </div>
+    </div>
+
+    <div class="para-block para-over">
+      <div class="para-label">Paragraph 2 — Overview (Most Important!)</div>
+      <div class="para-text">
+        <mark>Overall</mark>, all three countries experienced a <mark>significant increase</mark> in tourist numbers over the twenty-year period. France remained the most popular destination throughout, while Spain showed the most dramatic growth.
+      </div>
+    </div>
+
+    <div class="para-block para-body1">
+      <div class="para-label">Paragraph 3 — Body 1 (France & Spain)</div>
+      <div class="para-text">
+        France consistently attracted the highest number of visitors. In 2000, it received 70 million tourists, and this figure <mark>rose steadily</mark> to 77 million in 2010, before <mark>climbing</mark> further to 90 million by 2020. Spain, <mark>by contrast</mark>, started with a lower figure of 45 million in 2000 but <mark>grew considerably</mark>, reaching 83 million in 2020 — an <mark>increase of 38 million</mark> over the period.
+      </div>
+    </div>
+
+    <div class="para-block para-body2">
+      <div class="para-label">Paragraph 4 — Body 2 (USA)</div>
+      <div class="para-text">
+        <mark>Regarding</mark> the United States, tourist arrivals stood at 55 million in 2000 and <mark>increased moderately</mark> to 60 million in 2010. <mark>By 2020</mark>, the figure had <mark>risen</mark> to 79 million. <mark>Although</mark> the USA showed steady growth, its increase was less dramatic than that of Spain over the same period.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="infobox green">
+  <div class="infobox-title">Note the highlighted words above</div>
+  The <mark style="background:#FFF3BB;">yellow highlights</mark> show where good vocabulary has been used. Notice: different synonyms for "increase", linking words (by contrast, regarding, although), and time references (in 2000, by 2020).
+</div>
+
+
+<!-- ═══════════ SECTION 6: INTRODUCTION FORMULA ═══════════ -->
+<div class="section-label">
+  <div class="section-num">6</div>
+  <h2>Introduction Writing Formula</h2>
+</div>
+
+<p>The introduction is easy if you follow this formula. You just need to <strong>paraphrase</strong> the question — use different words to say the same thing.</p>
+
+<div class="bangla">
+  <strong>Paraphrase মানে কী?</strong> প্রশ্নের সেই একই কথা অন্য শব্দে বলা। আপনি প্রশ্নের শব্দগুলো হুবহু কপি করতে পারবেন না — পরীক্ষক marks দেবেন না।
+</div>
+
+<div class="formula">
+  <div><span class="bracket">[Type of chart]</span> <span class="plus">+</span> <span class="bracket">[synonym of "shows"]</span> <span class="plus">+</span> <span class="bracket">[what it shows]</span> <span class="plus">+</span> <span class="bracket">[place/country, if any]</span> <span class="plus">+</span> <span class="bracket">[time period]</span></div>
+</div>
+
+<h3>Practice Examples — Step by Step</h3>
+
+<div class="practice-card">
+  <h5>Practice 1 — Bar Chart</h5>
+  <p class="q-text">Original Question: "The bar chart below shows the number of books sold in three countries — UK, France, and Germany — between 2000 and 2020."</p>
+  <div style="margin-top:12px;">
+    <div class="step-row"><div class="step-num">1</div><div>Change "bar chart" → <strong>The bar chart</strong> (keep this, it's correct)</div></div>
+    <div class="step-row"><div class="step-num">2</div><div>Change "shows" → <strong>illustrates / presents / displays</strong></div></div>
+    <div class="step-row"><div class="step-num">3</div><div>Change "number of books sold" → <strong>the volume of book sales / the quantity of books purchased</strong></div></div>
+    <div class="step-row"><div class="step-num">4</div><div>Change "between 2000 and 2020" → <strong>over a twenty-year period / from 2000 to 2020</strong></div></div>
+  </div>
+  <div class="ans-text">✔ <strong>Final Introduction:</strong> "The bar chart <strong>illustrates</strong> the <strong>volume of book sales</strong> in the United Kingdom, France, and Germany <strong>over a twenty-year period</strong> from 2000 to 2020."</div>
+</div>
+
+<div class="practice-card">
+  <h5>Practice 2 — Line Graph</h5>
+  <p class="q-text">Original Question: "The line graph below shows changes in the average temperature in London between January and December."</p>
+  <div style="margin-top:12px;">
+    <div class="step-row"><div class="step-num">1</div><div>Change "line graph" → <strong>The line graph</strong> (keep)</div></div>
+    <div class="step-row"><div class="step-num">2</div><div>Change "shows changes in" → <strong>depicts fluctuations in / illustrates variations in</strong></div></div>
+    <div class="step-row"><div class="step-num">3</div><div>Change "average temperature" → <strong>mean monthly temperatures / typical temperature levels</strong></div></div>
+    <div class="step-row"><div class="step-num">4</div><div>Change "between January and December" → <strong>throughout the year / across all twelve months</strong></div></div>
+  </div>
+  <div class="ans-text">✔ <strong>Final Introduction:</strong> "The line graph <strong>depicts fluctuations</strong> in the <strong>mean monthly temperatures</strong> recorded in London <strong>throughout the course of a year</strong>."</div>
+</div>
+
+<div class="practice-card">
+  <h5>Practice 3 — Pie Chart</h5>
+  <p class="q-text">Original Question: "The pie charts below show how people in Bangladesh spent their income in 1990 and 2020."</p>
+  <div style="margin-top:12px;">
+    <div class="step-row"><div class="step-num">1</div><div>Change "pie charts" → <strong>The two pie charts / The pair of pie charts</strong></div></div>
+    <div class="step-row"><div class="step-num">2</div><div>Change "show" → <strong>present / compare / reveal</strong></div></div>
+    <div class="step-row"><div class="step-num">3</div><div>Change "how people spent their income" → <strong>the distribution of household expenditure / the way income was allocated</strong></div></div>
+    <div class="step-row"><div class="step-num">4</div><div>Add: "in two separate years" for "1990 and 2020"</div></div>
+  </div>
+  <div class="ans-text">✔ <strong>Final Introduction:</strong> "The <strong>two pie charts compare</strong> the <strong>distribution of household expenditure</strong> among people in Bangladesh in <strong>two separate years</strong>, 1990 and 2020."</div>
+</div>
+
+<div class="infobox teal">
+  <div class="infobox-title">Key Paraphrase Word List</div>
+  <table style="margin:0; font-size:14px;">
+    <thead><tr><th>Original Word</th><th>Paraphrase Options</th></tr></thead>
+    <tbody>
+      <tr><td>shows</td><td>illustrates, presents, displays, reveals, depicts, compares</td></tr>
+      <tr><td>number of</td><td>the figure for, the quantity of, the volume of, the proportion of</td></tr>
+      <tr><td>people</td><td>individuals, residents, the population, citizens</td></tr>
+      <tr><td>countries</td><td>nations, states</td></tr>
+      <tr><td>between 2000 and 2020</td><td>over a 20-year period, from 2000 to 2020, over two decades</td></tr>
+      <tr><td>information</td><td>data, figures, statistics</td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ═══════════ COMMON MISTAKES ═══════════ -->
+<hr class="divider">
+
+<div class="section-label">
+  <div class="section-num" style="background:var(--red);">!</div>
+  <h2 style="color:var(--red);">Common Mistakes — Do NOT Do These</h2>
+</div>
+
+<p>These are the most common mistakes beginners make. Read each one carefully.</p>
+
+<div style="border:1px solid var(--border); border-radius:10px; padding:4px 20px; background:#fff; margin-top:16px;">
+
+  <div class="mistake-item">
+    <div class="x-mark">✘</div>
+    <div class="mistake-text">
+      <strong>Copying the question word for word in the Introduction.</strong><br>
+      ✘ "The bar chart below shows the number of students who studied…"<br>
+      <span class="fix">✔ Fix: Paraphrase it — "The bar chart <em>illustrates</em> the <em>quantity</em> of students who <em>pursued</em>…"</span>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="x-mark">✘</div>
+    <div class="mistake-text">
+      <strong>Not writing an Overview paragraph.</strong><br>
+      ✘ Going directly from Introduction to Body 1 — no Overview.<br>
+      <span class="fix">✔ Fix: Always write "Overall, …" as your second paragraph. This is MANDATORY.</span>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="x-mark">✘</div>
+    <div class="mistake-text">
+      <strong>Writing your personal opinion.</strong><br>
+      ✘ "I think the government should increase funding because the data shows…"<br>
+      <span class="fix">✔ Fix: Just describe the data. Task 1 is NOT an essay. Never write "I think" or "In my opinion."</span>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="x-mark">✘</div>
+    <div class="mistake-text">
+      <strong>Writing ALL the data — every single number.</strong><br>
+      ✘ Listing every number from the chart without selecting the important ones.<br>
+      <span class="fix">✔ Fix: Select the MOST important data — highest, lowest, biggest change. Don't copy everything.</span>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="x-mark">✘</div>
+    <div class="mistake-text">
+      <strong>Using the same word again and again.</strong><br>
+      ✘ "The graph shows… The graph shows… The graph shows increase… The graph shows…"<br>
+      <span class="fix">✔ Fix: Use synonyms — illustrates, reveals, presents, demonstrates, depicts.</span>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="x-mark">✘</div>
+    <div class="mistake-text">
+      <strong>Writing less than 150 words.</strong><br>
+      ✘ Finishing in 100–130 words and moving on.<br>
+      <span class="fix">✔ Fix: Count your words. If under 150, add more detail or expand your sentences. You WILL lose marks.</span>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="x-mark">✘</div>
+    <div class="mistake-text">
+      <strong>Wrong tense — using present tense for past data.</strong><br>
+      ✘ "In 2010, sales <em>increase</em> to 500 units."<br>
+      <span class="fix">✔ Fix: Use past tense for past data — "In 2010, sales <em>increased</em> to 500 units."</span>
+    </div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="x-mark">✘</div>
+    <div class="mistake-text">
+      <strong>No numbers in the Body paragraphs.</strong><br>
+      ✘ "Sales increased a lot and then decreased." (vague — no data)<br>
+      <span class="fix">✔ Fix: Always include specific numbers — "Sales increased from 200 to 450 units, representing a rise of 125%."</span>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════ HOMEWORK ═══════════ -->
+<div class="hw-box">
+  <h3>📚 Homework — Before Next Class</h3>
+  <p style="color:rgba(255,255,255,0.65); font-size:14px; margin-bottom:20px;">Complete all tasks before Class 2. Bring your answers to the next class for feedback.</p>
+
+  <div class="hw-item">
+    <div class="hw-num">1</div>
+    <div>
+      <strong>Vocabulary Practice:</strong> Write 2 sentences for each word in the "increase" and "decrease" lists. That is 14 sentences total. Use different topics (temperature, sales, population, etc.).
+    </div>
+  </div>
+
+  <div class="hw-item">
+    <div class="hw-num">2</div>
+    <div>
+      <strong>Introduction Practice:</strong> Write an introduction for the following question using the formula from Section 6:<br>
+      <em style="color:var(--gold-mid);">"The line graph below shows the percentage of people using the internet in three countries — Bangladesh, India, and Pakistan — between 2000 and 2022."</em>
+    </div>
+  </div>
+
+  <div class="hw-item">
+    <div class="hw-num">3</div>
+    <div>
+      <strong>Memorise 5 Synonyms:</strong> Learn and memorise at least 5 synonyms for "shows" and 5 words for "increase." Write them without looking at your notes.
+    </div>
+  </div>
+
+  <div class="hw-item">
+    <div class="hw-num">4</div>
+    <div>
+      <strong>Structure Practice:</strong> Draw or write the 4-paragraph structure from memory (Introduction, Overview, Body 1, Body 2). Write what each paragraph must contain — without looking at the notes.
+    </div>
+  </div>
+
+  <div class="hw-item">
+    <div class="hw-num">5</div>
+    <div>
+      <strong>Challenge Task (Optional — for strong students):</strong> Write a complete 150-word Task 1 answer for the following:<br>
+      <em style="color:var(--gold-mid);">"The bar chart shows the number of visitors to three popular tourist attractions in London — the British Museum, the Tate Modern, and the National Gallery — in 2015, 2018, and 2021. Data: British Museum: 6.8M / 5.9M / 4.1M | Tate Modern: 4.7M / 5.8M / 2.3M | National Gallery: 5.2M / 6.0M / 1.2M"</em>
+    </div>
+  </div>
+
+  <div style="margin-top:24px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.15); font-size:13px; color:rgba(255,255,255,0.45); text-align:center;">
+    Next Class: We will cover Linking Words, Overview Writing in Depth, and Body Paragraph techniques.
+  </div>
+</div>
+
+</div><!-- /page -->
+
+<div class="footer">
+  IELTS Writing Task 1 — Class 1 Lecture &nbsp;|&nbsp; For Beginner Students &nbsp;|&nbsp; Academic Module
+</div>
+
+</body>
+</html>
